@@ -1,5 +1,6 @@
 package com.example.xueyangzou.sqlapp;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static RadioGroup radio_g;
     private static RadioButton radio_b;
     private static Button button_search;
+    private static Button button_map;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -66,6 +68,17 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, radio_b.getText().toString(), Toast.LENGTH_SHORT).show();
                         /*use radio_b.getText().toString() and upload it into the SQLite db
                         * also, the click of search should start another activity*/
+                    }
+                }
+        );
+
+        button_map = (Button) findViewById(R.id.button_map);
+        button_map.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        Intent intent = new Intent ("com.example.xueyangzou.sqlapp.MapsActivity");
+                        startActivity(intent);
                     }
                 }
         );
