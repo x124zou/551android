@@ -55,6 +55,7 @@
                 <action android:name="com.example.xueyangzou.sqlapp.MapsActivity" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
